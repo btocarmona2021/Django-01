@@ -6,8 +6,10 @@ services:
     volumes:
       - ./src/django:/usr/src/app:delegated
     ports:
-      - 8000:8000
+      - "8000:8000"
     networks:
-      red:
+      - mired
+
 networks:
-  red:
+  mired:
+    external: true
